@@ -1,0 +1,89 @@
+<div class="panel-header"  style="background-color: yellowgreen"> 
+    <app-footer></app-footer>
+   </div>
+   <div class="main-content" id="cardLogin">
+      
+  
+<div class="card">
+    <div class="card-header">
+        <h5 class="title text-center">CREAR HABITACION</h5>
+    </div>
+            <div class="row" style="overflow-x: auto;">
+                <div style="justify-content:center;">
+                    <div class="col-md-3" id="btnGuardar">
+                        <button type="button" class="fadeIn fourth" value="Guardar" (click)="crearHabitacion()">Guardar</button>
+                            <button type="button" class="fadeIn fourth" value="Actualizar" (click)="actualizarHabitacion()">Actualizar</button>
+                    
+                        <button type="button" class="fadeIn fourth" value="Buscar" (click)="buscarHabitaciones()">Buscar</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="tr">
+                    <div style="width: 40%;padding-right: 15px;padding-left: 15px;" class="tl"> 
+                            <select id="selecionarPiso">
+                                    <option disabled>NumeroPiso</option>
+                                    <option id="1">1</option>
+                                    <option id="2">2</option>
+                                    <option id="3">3</option>
+                                    <option id="4">4</option>
+                                </select>   
+                            </div> 
+                        
+                    <input type="text" id="numeroHabitacion" class="fadeIn third" name="numeroHabitacion" placeholder="Numero Habitacion">
+                </div>
+                
+            </div>
+            <div class="row">
+                            <input type="text" id="extencionHabitacion" class="fadeIn third" name="extencionHabitacion" placeholder="Extencion Habitacion">
+                <div class="tl">
+                <div > 
+                        <select id="selecionTipoHabitacion">
+                            <option disabled>TipoHabitacion</option>
+                            <option id="1">Estandar</option>
+                            <option id="2">Suit</option>
+                        </select>   
+                    </div> 
+                </div>
+                <div class="row">
+                <div style="width: 40%;padding-right: 15px;padding-left: 15px;" class="tl"> 
+                    <select id="selecionarPersonas">
+                            <option disabled>NumeroPersonas</option>
+                            <option id="1">1</option>
+                            <option id="2">2</option>
+                            <option id="3">3</option>
+                            <option id="4">4</option>
+                        </select>   
+                    </div> 
+                    <div style="width: 40%;padding-right: 15px;padding-left: 15px;" class="tr"> 
+                            <select id="selecionarEstado">
+                                    <option disabled>Estado</option>
+                                    <option id="1">Activo</option>
+                                    <option id="2">Inacativo</option>
+                                </select>   
+                            </div> 
+                </div>
+            </div>
+        </div>
+
+          <div class="row" style="text-align:-webkit-center;">
+            <table>
+                <thead>
+                    <title><h2>Hoteles</h2></title>
+                </thead>
+                <tbody>
+                    <div *ngFor="let habitaciones of habitacionesActivos">
+                        <tr>
+                            <td>Numero Habitacion</td> <td>Numero Piso</td>
+                        </tr>
+                        <tr *ngFor="let habitacion of habitaciones">
+                            <td (click)="selecionarHabitacion(habitacion)">{{habitacion.numeroHabitacion}}</td><td>{{habitacion.pisoHabitacion}}</td>
+                        </tr>
+                    </div> 
+                </tbody>
+            </table>
+        </div>
+    </div>
+   
+    

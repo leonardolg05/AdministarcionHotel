@@ -1,0 +1,6 @@
+<div class="form-group">
+    <select [id] = "seleccionObjeto.id" [title]="seleccionObjeto.titulo" name="seleccion" [ngModel]="seleccionID" (ngModelChange)="seleccionCambio($event)"> 
+        <option [ngValue]="undefined" disabled selected>{{seleccionObjeto.titulo}}</option>
+        <option *ngFor="let opcion of seleccionObjeto.opciones" value={{opcion.id}}>{{opcion.nombre}}</option>
+      </select> 
+</div>

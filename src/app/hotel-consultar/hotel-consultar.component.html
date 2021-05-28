@@ -1,0 +1,47 @@
+<div class="panel-header">
+    <app-footer></app-footer>
+   </div>
+   <div class="main-content" id="cardLogin">
+      
+    <div class="row" id="navLogin" style="justify-content: center">
+      <div class="col-4" style="justify-content: center">
+  
+<div class="card">
+    <div class="card-header">
+        <h5 class="title text-center">CONSULTAR HOTEL</h5>
+    </div>
+    <div class="row">
+        <div class="col-md-10 ">
+            <ul id="buttonMenu">
+                <button routerLink="/crearHoteles">Registrar hotel</button>
+             </ul>
+        </div>
+    </div>
+    <div class="card-body">
+        <table class="table">
+            <div>
+                <thead>
+                    <td>nombre</td>
+                    <td>direccion</td>
+                    <th>telefono</th>
+                    <th>estado</th>
+                    <th>habitacion</th>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let item of hoteles">
+                        <td>{{item.nombre}}</td>
+                        <td>{{item.direccion}}</td>
+                        <td>{{item.telefono}}</td>
+                        <td>{{item.estado}}</td>
+                        
+                        <td>
+                            <button class="btn" title="Asociar cliente" (click)="asociarHabitacion(item.id)" routerLink="/crearHabitacion"><i
+                            class="now-ui-icons users_single-02"></i></button>
+                        </td>
+                        
+                    </tr>
+                </tbody>
+            </div>
+        </table>
+</div></div></div></div>
+</div>

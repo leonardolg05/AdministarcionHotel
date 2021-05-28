@@ -1,0 +1,36 @@
+input
+{
+   border-radius: 5px;
+   background-color: #ffffff;
+   width: 30%;
+   margin-left: 2%;
+    margin-top: 1%;
+}
+
+form{
+    text-align-last: center;
+    background-color:#efecec;
+    }
+
+
+    button{
+        background-color: #393e53;
+            color: white;
+          /*  -webkit-border-radius: 10px 10px 10px 10px;*/
+            margin-left: 3%;
+    }
+    .button {
+        display: flex;
+        border-radius: 8px;
+        margin-block-end: 8%;
+    }
+    
+    h2{
+        text-align: center;
+    }
+
+    #panel-header{
+    background-color: yellowgreen;
+    }
+
+    .card{background-color:#efecec;}

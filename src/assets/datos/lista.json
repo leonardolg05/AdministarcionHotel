@@ -1,0 +1,11 @@
+{
+    "estado":{
+        "id":"estado",
+        "titulo":"*Estado",
+        "opciones": [
+            {"nombre":"Activo","id":1},
+            {"nombre":"Inactivo","id":2}
+        ],
+        "mensaje":""
+    }
+}

@@ -1,0 +1,60 @@
+<div class="panel-header-sm">
+   <app-footer></app-footer>
+  </div>
+  <div class="main-content" id="cardLogin">
+      
+    <div class="row" id="navLogin" style="justify-content: center">
+      <div class="col-4" style="justify-content: center">
+  
+        <div class="card">
+          <div>
+            <form>
+<h2>Login</h2>
+              <div class="row" style="justify-content: center">
+                <div class="col-md-10 pr-1">
+                  <div class="form-group">
+                    <div class="row" id="usuario">
+                        <input type="text" class="form-control" placeholder="Usuario" id="tbxUsuario">
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-10 pr-1">
+                  <div class="form-group">
+                    <div class="row" id="password">
+                          <input type="password" class="form-control" placeholder="Contraseña" id="tbxContraseña">                    
+                      </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row" id="btns" style="background-color:honeydew">
+              
+                    <div class="col-md-10 pr-1" id="btnLogin">
+                      <button type="button" class="btn btn-default" (click)="loginAdministracionHoteles()" routerLink="/HotelNuevoComponent">LOGIN</button>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-md-5 pr-1">
+                      <a href="#">Recordarme</a>
+  
+                    </div>
+                    <div class="col-md-5" style="text-align: right">
+                      <a href="#">Olvidaste tu contraseña?</a>
+                    </div>
+                  </div>
+  
+                  <ng-container *ngIf="posts.length > 1">
+                    <div *ngFor="let post of posts">
+                      <h3>{{post.token}}</h3>
+                      <p>{{post.expiration}}</p>
+                      <h3>{{post.identificacion}}</h3>
+                    </div>
+                  </ng-container>
+            </form>
+          </div>
+        </div>
+      </div>
+  
+    </div>
+  </div>

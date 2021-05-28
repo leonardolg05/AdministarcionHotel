@@ -1,0 +1,49 @@
+<div id="panel-header">
+    <app-footer></app-footer>
+</div>
+
+
+<div class="card">
+    <div class="card-header">
+        <h2 class="title text-center">AGREGAR HOTEL</h2>
+    </div>
+    <div class="row">
+            <div id="buttonMenu" class="button">
+                <button routerLink="/consultarHoteles">Consultar hoteles</button>
+        </div>
+    </div>
+    <div class="card-body">
+        <div class="container">
+            <form [formGroup]="formHotel" (ngSubmit)="onSubmit()">
+                <div class="col-md-12">
+                    <div class="row">
+                        <div class="col-md-4 ">
+                            <div class="form-group">
+                                <input id="nombre" type="text" class="form-control" formControlName="nombre" maxlength="100" placeholder="*Nombre" (click)="validarCampoInput('nombre')" (keyup)="validarCampoInput('placa')">
+                                <div class="black-font" *ngIf="formHotel.controls['nombre'].hasError('pattern')">Formato de nombre invalido</div>
+                            
+                                <input id="direccion" type="text" class="form-control" formControlName="direccion" maxlength="30" placeholder="*Direccion" (click)="validarCampoInput('direccion')" (keyup)="validarCampoInput('direccion')">
+                                <div class="black-font" *ngIf="formHotel.controls['direccion'].hasError('pattern')">Formato de direccion invalido</div>
+
+                                <input id="telefono" type="text" class="form-control" formControlName="telefono" maxlength="20" placeholder="*Telefono" (click)="validarCampoInput('telefono')" (keyup)="validarCampoInput('telefono')">
+                                <div class="black-font" *ngIf="formHotel.controls['telefono'].hasError('pattern')">Formato de telefono invalido</div>
+                            </div>
+                        </div>
+                       </div>
+                       <div class="row">
+                        <div class="col-md-4 ">
+                            <div class="form-group">
+                                <app-listas-seleccion-id
+                                [(seleccionObjeto)]="jsonData.estado"></app-listas-seleccion-id>
+                            </div>
+                        </div>
+                       </div>
+                    </div>
+                    <div class="row" style="margin-top: 2%;">
+                            <button>Guardar</button>
+                    </div>
+            </form>
+        </div>
+    </div>
+</div>
+<router-outlet></router-outlet>

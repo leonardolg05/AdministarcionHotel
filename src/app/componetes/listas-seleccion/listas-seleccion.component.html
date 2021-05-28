@@ -1,0 +1,10 @@
+<div class="form-group">
+    <select [id] = "seleccionObjeto.id" [title]="seleccionObjeto.titulo" name="seleccion" [ngModel]="seleccion" (ngModelChange)="seleccionCambio($event)"> 
+        <option value="" aria-selected>{{seleccionObjeto.titulo}}</option>
+        <option *ngFor="let opcion of seleccionObjeto.opciones" [value]="opcion">{{opcion}}</option>
+      </select> 
+</div>
+<!-- 
+<div *ngIf="flagOtro" class="form-group">
+    <input type="text" class="form-control" placeholder="otro..." [name] = "seleccionObjeto.id + 'Otro'" [(ngModel)]="seleccionObjeto.mensaje" >
+</div> -->
